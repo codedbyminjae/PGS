@@ -6,8 +6,6 @@ class Solution {
         int sc = spell.length;
         int dc = dic.length;
         
-        
-        
         for (int i = 0; i < dic.length; i++) {
             count = 0;
             boolean[] used = new boolean[sc];
@@ -17,12 +15,11 @@ class Solution {
                 
                 for (int k = 0; k < spell.length; k++) {
                     if (ch == spell[k].charAt(0) && !used[k]) {
-                        count ++;
+                        count++;
                         used[k] = true;
                     }
                 }
             }
-            
             if (count == sc) {
                 return 1;
             }
